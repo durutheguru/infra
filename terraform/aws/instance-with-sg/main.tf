@@ -56,6 +56,10 @@ resource "aws_instance" "web" {
               echo "Hello World" > /var/www/html/index.html
               systemctl restart apache2
               EOF
+            
+    tags = {
+        Name = "EC2-With-SG"
+    }
 }
 
 
